@@ -31,6 +31,8 @@ const getTextVariantStyle = (variant: ButtonProps['textVariant']) => {
   }
 };
 
+// default component
+
 export default ({
   onPress,
   title,

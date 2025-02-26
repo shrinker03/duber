@@ -2,3 +2,4 @@ node_modules
 .expo
 build
 dist
+auto-commit.js
