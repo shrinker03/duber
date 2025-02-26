@@ -1,3 +1,4 @@
+import CutomButton from '@/components/CutomButton';
 import { onboarding } from '@/constants';
 import { router } from 'expo-router';
 import { useRef, useState } from 'react';
@@ -47,6 +48,8 @@ export default () => {
           </View>
         ))}
       </Swiper>
+
+      <CutomButton title="Next" className="w-11/12 mt-10" />
     </SafeAreaView>
   );
 };
