@@ -12,7 +12,7 @@ const getBgVariantStyle = (variant: ButtonProps['bgVariant']) => {
     case 'outline':
       return 'bg-transparent border-neutral-300 border-[0.5px]';
     default:
-      return 'bg-[#0286ff]';
+      return 'bg-[#0286FF]';
   }
 };
 
@@ -46,12 +46,10 @@ export default ({
   const bgVariantProps = getBgVariantStyle(bgVariant);
   const textVariantProps = getTextVariantStyle(textVariant);
 
-  console.log(bgVariantProps, 'bgVariantProps==>');
-
   return (
     <TouchableOpacity
       onPress={onPress}
-      className={`w-full rounded-full flex justify-center items-center shadow-md shadow-neutral-400/70 ${bgVariantProps} ${className}`}
+      className={`w-full p-3 rounded-full flex justify-center items-center shadow-md shadow-neutral-400/70 ${bgVariantProps} ${className}`}
       {...props}
     >
       {IconLeft && <IconLeft />}

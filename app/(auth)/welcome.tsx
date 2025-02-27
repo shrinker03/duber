@@ -7,8 +7,10 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Swiper from 'react-native-swiper';
 
 export default () => {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<Swiper>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const isLastScreen = activeIndex === onboarding.length - 1;
 
   return (
     <SafeAreaView className="flex h-full items-center justify-between bg-white">
@@ -49,7 +51,15 @@ export default () => {
         ))}
       </Swiper>
 
-      <CutomButton title="Next" className="w-11/12 mt-10" />
+      <CutomButton
+        title={isLastScreen ? 'Get Start' : 'Next'}
+        onPress={() => {
+          isLastScreen
+            ? router.replace('/(auth)/sign-up')
+            : swiperRef.current?.scrollBy(1);
+        }}
+        className="w-11/12 mt-10"
+      />
     </SafeAreaView>
   );
 };
