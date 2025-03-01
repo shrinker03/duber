@@ -1,21 +1,21 @@
-import { InputFieldProps } from '@/types/type';
-import React from 'react';
 import {
-  Image,
-  Keyboard,
-  KeyboardAvoidingView,
-  Platform,
-  Text,
   TextInput,
-  TouchableWithoutFeedback,
   View,
+  Text,
+  Image,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard,
+  Platform,
 } from 'react-native';
+
+import { InputFieldProps } from '@/types/type';
 
 const InputField = ({
   label,
-  labelStyle,
   icon,
   secureTextEntry = false,
+  labelStyle,
   containerStyle,
   inputStyle,
   iconStyle,
@@ -32,16 +32,16 @@ const InputField = ({
             {label}
           </Text>
           <View
-            className={`flex justify-start items-center relative bg-neutral-100 rounded-full border border-neutral-100 focus:border-primary-500 ${containerStyle}`}
+            className={`flex flex-row justify-start items-center relative bg-neutral-100 rounded-full border border-neutral-100 focus:border-primary-500  ${containerStyle}`}
           >
-            {icon ? (
+            {icon && (
               <Image source={icon} className={`w-6 h-6 ml-4 ${iconStyle}`} />
-            ) : null}
+            )}
             <TextInput
-              className={`rounded-full p-4 font-JakartaSemiBold text-[15px] flex-1 ${inputStyle}`}
+              className={`rounded-full p-4 font-JakartaSemiBold text-[15px] flex-1 ${inputStyle} text-left`}
               secureTextEntry={secureTextEntry}
               {...props}
-            ></TextInput>
+            />
           </View>
         </View>
       </TouchableWithoutFeedback>

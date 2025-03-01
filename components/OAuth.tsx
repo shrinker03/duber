@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text, View } from 'react-native';
-import CutomButton from './CutomButton';
+import CutomButton from './CustomButton';
 import { icons } from '@/constants';
 
 const OAuth = () => {

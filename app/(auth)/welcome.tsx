@@ -1,4 +1,4 @@
-import CutomButton from '@/components/CutomButton';
+import CutomButton from '@/components/CustomButton';
 import { onboarding } from '@/constants';
 import { router } from 'expo-router';
 import { useRef, useState } from 'react';

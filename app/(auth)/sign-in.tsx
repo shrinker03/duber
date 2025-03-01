@@ -2,7 +2,7 @@ import InputField from '@/components/InputField';
 import { icons, images } from '@/constants';
 import { Image, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import CutomButton from '@/components/CutomButton';
+import CutomButton from '@/components/CustomButton';
 import OAuth from '@/components/OAuth';
 import { Link } from 'expo-router';
 import { useState } from 'react';
