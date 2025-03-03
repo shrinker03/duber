@@ -1,14 +1,14 @@
 import React from 'react';
 import { SafeAreaView, Text, View } from 'react-native';
 
-const Rides = () => {
+const Index = () => {
   return (
     <SafeAreaView>
       <View>
-        <Text>Rides</Text>
+        <Text>Index</Text>
       </View>
     </SafeAreaView>
   );
 };
 
-export default Rides;
+export default Index;

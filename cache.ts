@@ -6,6 +6,7 @@ const createTokenCache = (): TokenCache => {
   return {
     getToken: async (key: string) => {
       try {
+        // await SecureStore.deleteItemAsync(key); to test out the sign-in flow
         const item = await SecureStore.getItemAsync(key);
         if (item) {
           console.log(`${key} was used 🔐 \n`);
