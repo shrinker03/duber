@@ -51,15 +51,17 @@ export default () => {
         ))}
       </Swiper>
 
-      <CutomButton
-        title={isLastScreen ? 'Get Start' : 'Next'}
-        onPress={() => {
-          isLastScreen
-            ? router.replace('/(auth)/sign-up')
-            : swiperRef.current?.scrollBy(1);
-        }}
-        className="w-11/12 mt-10"
-      />
+      <View className="px-2 w-full">
+        <CutomButton
+          title={isLastScreen ? 'Get Start' : 'Next'}
+          onPress={() => {
+            isLastScreen
+              ? router.replace('/(auth)/sign-up')
+              : swiperRef.current?.scrollBy(1);
+          }}
+          className="w-11/12 mt-10 mb-4"
+        />
+      </View>
     </SafeAreaView>
   );
 };
