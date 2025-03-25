@@ -3,6 +3,7 @@ import { GoogleInputProps } from '@/types/type';
 import React from 'react';
 import { Image, ScrollView, View } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import uuid from 'react-native-uuid';
 
 const googlePlacesApiKey = process.env.EXPO_PUBLIC_GOOGLE_API_KEY;
 
@@ -14,6 +15,8 @@ const GoogleTextInput = ({
   textInputBackgroundColor,
 }: GoogleInputProps) => {
   console.log(googlePlacesApiKey, 'googlePlacesApiKey===>');
+
+  const requestId = uuid.v4();
 
   return (
     <View
@@ -74,6 +77,10 @@ const GoogleTextInput = ({
         textInputProps={{
           placeholderTextColor: 'gray',
           placeholder: initialLocation ?? 'Where do you want to go?',
+        }}
+        requestUrl={{
+          url: 'https://api.olamaps.io/places/v1/autocomplete',
+          useOnPlatform: 'all',
         }}
       />
     </View>
